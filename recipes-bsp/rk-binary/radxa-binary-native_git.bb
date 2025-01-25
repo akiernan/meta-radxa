@@ -23,3 +23,6 @@ do_install () {
 	install -m 0755 "${S}/tools/resource_tool" ${D}/${bindir}
 
 }
+
+# Don't attempt to strip else we fail on ARM hosts
+INHIBIT_SYSROOT_STRIP = "1"
