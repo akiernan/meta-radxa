@@ -50,7 +50,7 @@ do_install_append() {
 }
 
 do_deploy_append() {
-	cp -a ${B}/tools/mkimage ${DEPLOY_DIR_IMAGE}
+	cp -a ${B}/tools/mkimage ${DEPLOYDIR}
 	if [ -f "${WORKDIR}/${MACHINE}/uEnv.txt" ]; then
 		install -D -m 644 ${WORKDIR}/${MACHINE}/uEnv.txt ${DEPLOYDIR}/
 	fi
