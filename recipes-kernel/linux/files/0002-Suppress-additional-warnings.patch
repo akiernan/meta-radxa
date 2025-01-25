@@ -1,4 +1,4 @@
-From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From 1b90253ed30c4c71a2971819167172503346d4fe Mon Sep 17 00:00:00 2001
 From: Stephen <stephen@vamrs.com>
 Date: Mon, 21 Sep 2020 15:07:15 +0800
 Subject: [PATCH] Suppress additional warnings
@@ -10,13 +10,13 @@ Signed-off-by: Yuntian Zhang <yt@radxa.com>
  1 file changed, 17 insertions(+)
 
 diff --git a/Makefile b/Makefile
-index c033e03a5a..4056068436 100644
+index ce42b27ec387..375c0a244a06 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -651,6 +651,23 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, format-truncation)
+@@ -648,6 +648,23 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning,frame-address,)
+ KBUILD_CFLAGS	+= $(call cc-disable-warning, format-truncation)
  KBUILD_CFLAGS	+= $(call cc-disable-warning, format-overflow)
  KBUILD_CFLAGS	+= $(call cc-disable-warning, int-in-bool-context)
- KBUILD_CFLAGS	+= $(call cc-disable-warning, attribute-alias)
 +KBUILD_CFLAGS	+= $(call cc-disable-warning, address-of-packed-member)
 +KBUILD_CFLAGS	+= $(call cc-disable-warning, array-bounds)
 +KBUILD_CFLAGS	+= $(call cc-disable-warning, array-compare)
@@ -38,5 +38,5 @@ index c033e03a5a..4056068436 100644
  ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
  KBUILD_CFLAGS	+= $(call cc-option,-Oz,-Os)
 -- 
-2.36.1
+2.25.1
 
