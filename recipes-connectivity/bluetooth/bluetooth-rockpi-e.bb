@@ -24,3 +24,5 @@ do_install() {
 }
 
 FILES_${PN} += "/etc/modprobe.d/blacklist-bt.conf"
+
+COMPATIBLE_MACHINE = "rockpi-e-rk3328"
